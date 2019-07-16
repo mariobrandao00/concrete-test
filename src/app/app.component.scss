@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import '../assets/vendor/reset';
+@import '../assets/scss/variables';
+@import '../assets/scss/icons';
+
+html {
+    * {
+        box-sizing: border-box;
+    }
+}
+.container {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1152px;
+    padding: 0 10px;
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.main-content {
+    display: flex;
+    .project-logo {
+        width: 100%;
+        text-align: center;
+	    font-family: monaco,Consolas,Lucida Console,monospace;
+        font-size: 40px;
+        color: $black;
+        text-decoration: none;
+        margin-bottom: 1rem;
+        i {
+            font-family: Raleway;
+            font-weight: 200;
+            font-style: italic;
+        }
+    }
+    app-search {
+        display: flex;
+        width: 100%;
+        max-width: 750px;
+        align-items: baseline;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 28px;
+        .row {
+            margin-left: -14px;
+            margin-right: -14px;
+        }
+    }
+    .main-content {
+        .project-logo {
+            width: auto;
+            font-size: 60px;
+        }
+    }
+}

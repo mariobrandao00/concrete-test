@@ -1,0 +1,6 @@
+<form class="search-form" [formGroup]="searchForm" (submit)="submitForm()">
+    <input #nameField type="text" class="form-control" name="name" formControlName="name">
+    <button type="submit" title="Buscar" class="btn-search">
+        <i class="icon i-search"></i>
+    </button>
+</form>

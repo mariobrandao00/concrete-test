@@ -1,0 +1,10 @@
+
+.main-content {
+    &.home {
+        align-items: center;
+        height: 100vh;
+        .row {
+            justify-content: center;
+        }
+    }
+}

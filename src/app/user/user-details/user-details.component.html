@@ -1,0 +1,40 @@
+<div *ngIf="!notFound && !loading" class="container user-content">
+    <div class="row">
+        <div class="user-info">
+            <img *ngIf="user.avatar_url" src="{{ user.avatar_url }}" alt="{{ user.name }}">
+            <h1 *ngIf="user.name" class="user-name">{{ user.name }}</h1>
+            <a *ngIf="user.login && user.html_url" 
+                href="{{ user.html_url }}"
+                target="_blank" 
+                class="user-login">{{ user.login }}</a>
+
+            <ul class="user-attributes">
+                <li *ngIf="user.company"><i class="icon i-organization"></i> {{ user.company }}</li>
+                <li *ngIf="user.location"><i class="icon i-location"></i> {{ user.location }}</li>
+                <li *ngIf="user.stargazers_count"><i class="icon i-star"></i> {{ user.stargazers_count }}</li>
+                <li *ngIf="user.public_repos"><i class="icon i-repository"></i> {{ user.public_repos }}</li>
+                <li *ngIf="user.followers"><i class="icon i-followers"></i> {{ user.followers_count }}</li>
+            </ul>
+        </div>
+
+        <div class="user-project-list">
+            <section *ngFor="let repository of user.repositories" class="user-project">
+                <a  *ngIf="repository.name && repository.html_url" 
+                    href="{{ repository.html_url }}" 
+                    target="_blank"
+                    class="user-project-title">
+                    {{ repository.name}}
+                </a>
+                <p *ngIf="repository.description" class="user-project-description">{{ repository.description }}</p>
+                <p class="user-project-rating"><i class="icon i-star"></i> {{ repository.stargazers_count }}</p>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" *ngIf="notFound && !loading">
+    <div class="row">
+        <h1 class="not-found">User not found :(</h1>
+    </div>
+</div>

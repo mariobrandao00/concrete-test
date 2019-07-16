@@ -1,0 +1,132 @@
+@import '../../../assets/scss/variables';
+
+.main-content {
+    &.user {
+        margin-top: 35px;
+        .row {
+            justify-content: space-between;
+        }
+        .project-logo {
+            font-size: 40px;
+        }
+    }
+}
+
+.user-content {
+    margin-top: 52px;
+    .row {
+        justify-content: space-between;
+    }
+    .user-info {
+        flex-basis: 100%;
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #dcdcdc;
+        img {
+            width: 100%;
+        }
+        .user-name {
+            display: inline-block;
+            width: 100%;
+            font-family: Raleway;
+            font-size: 35px;
+            font-weight: 300;
+            color: $black;
+            margin-top: 12px;
+        }
+        .user-login {
+            display: inline-block;
+            width: 100%;
+            font-family: Raleway;
+            font-size: 20px;
+            font-weight: 300;
+            color: $brownish-grey;
+            text-decoration: none;
+            margin-top: 7px;
+        }
+        .user-attributes {
+            margin-top: 25px;
+            li {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                margin: 7px 0;
+                font-family: Raleway;
+                font-size: 20px;
+                line-height: 1.2;
+                font-weight: 300;
+                color: $brownish-grey;
+                padding-left: 30px;
+                .icon {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+    .user-project-list {
+        margin-top: 20px;
+        flex-basis: 100%;
+        width: 100%;
+        .user-project {
+            margin-bottom: 30px;
+            font-family: Raleway;
+            .user-project-title {
+                font-size: 20px;
+                line-height: 1.2;
+                color: $purple;
+                text-decoration: none;
+            }
+            .user-project-description,
+            .user-project-rating {
+                font-size: 15px;
+                font-weight: 300;
+            }
+            .user-project-description {
+                color: $black;
+                line-height: 1.2;
+            }
+            .user-project-rating {
+                margin-top: 8px;
+                color: $brownish-grey;
+                .icon {
+                    margin-bottom: -5px;
+                }
+            }
+        }
+    }
+}
+
+.not-found {
+    text-align: center;
+    margin-top: 124px;
+    font-family: Raleway;
+    font-size: 40px;
+    color: $purple;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .user-content {
+        .user-info {
+            max-width: 280px;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .user-project-list {
+            margin-top: 0;
+            flex-basis: calc(100% - 372px);
+            width: calc(100% - 372px);
+            .user-project {
+                .user-project-title {
+                    font-size: 35px;
+                }
+                .user-project-description,
+                .user-project-rating {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

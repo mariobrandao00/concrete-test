@@ -1,0 +1,31 @@
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    &.i-followers {
+        background: url('../assets/icons/followers.svg') no-repeat;
+        background-size: contain;
+    }
+    &.i-location {
+        background: url('../assets/icons/location.svg') no-repeat;
+        background-size: contain;
+    }
+    &.i-organization {
+        background: url('../assets/icons/organization.svg') no-repeat;
+        background-size: contain;
+    }
+    &.i-repository {
+        background: url('../assets/icons/repository.svg') no-repeat;
+        background-size: contain;
+    }
+    &.i-search {
+        background: url('../assets/icons/search.svg') no-repeat;
+        background-size: contain;
+        width: 30px;
+        height: 30px;
+    }
+    &.i-star {
+        background: url('../assets/icons/star.svg') no-repeat;
+        background-size: contain;
+    }
+}
